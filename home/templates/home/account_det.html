@@ -1,0 +1,104 @@
+{% extends 'home/base.html' %}
+
+{% block title %}Account Details{% endblock %}
+
+{% block body %}
+<div class="container">
+        <div class="row mb-5">
+            <div class="card" style="width: 100%;">
+                <div class="card-body">
+                    <div class="col-12 mt-5 text-center">
+                        <h3>ACCOUNT DETAILS</h3>
+                    </div>
+                    <div class="col-12 text-center mt-4 mb-5">
+                        <img src="{{ userinfo.Profile_image.url }}" class="rounded-circle img-thumbnail" width="350" height="350">
+                    </div>
+                    <div class="row">
+                        <div class="col-4 mt-5 left">
+                            <p class="h4">Name</p>
+                        </div>
+                        <div class="col-8 mt-5 left">
+                            <p class="h6"> : <span class="details ml-3 text-muted">{{ userinfo.name }}</span></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 left">
+                            <p class="h4">Email ID</p>
+                        </div>
+                        <div class="col-8 left">
+
+                            <p class="h6"> : <span class="details ml-3 text-muted">{{ userinfo.user.email }}</span></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 left">
+                            <p class="h4">Display Name</p>
+
+                        </div>
+                        <div class="col-8 left">
+                            <p class="h6"> : <span class="details ml-3 text-muted">{{ userinfo.name }}</span></p>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 left">
+                            <p class="h4">Address</p>
+
+                        </div>
+                        <div class="col-8 left">
+                            <p class="h6"> : <span class="details ml-3 text-muted">Near Dhamnagar Police Station, Wellington
+                                    Island</span></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 left">
+                            <p class="h4">City</p>
+
+                        </div>
+                        <div class="col-8 left">
+                            <p class="h6"> : <span class="details ml-3 text-muted">{{ userinfo.city }}</span></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 left">
+                            <p class="h4">State</p>
+
+                        </div>
+                        <div class="col-8 left">
+                            <p class="h6"> : <span class="details ml-3 text-muted">{{ userinfo.state }}</span></p>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 left">
+                            <p class="h4">Phone Number</p>
+
+                        </div>
+                        <div class="col-8 left">
+                            <p class="h6"> : <span class="details ml-3 text-muted">8945654510</span></p>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 right">
+                            <a href="#" type="button" class="btn btn-primary">Edit <i class="fas fa-edit ml-2"></i></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center mt-3">
+                            <a href="{% url 'home:user-logout' %}" type="button" class="btn btn-success btn-lg">Logout <i class="fas fa-sign-out-alt ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<li>{{ userinfo }}</li>
+<li>{{ userinfo }}</li>
+<li>{{ userinfo.name }}</li>
+<li>{{ userinfo.city }}</li>
+<li>{{ userinfo.state }}</li>
+<li>{{ userinfo.user.email }}</li>
+
+{% endblock %}

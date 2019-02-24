@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html class="html" itemscope="" itemtype="http://schema.org/WebPage" lang="en-US">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <title>{% block title%}Online Marketplace{% endblock %}</title>
+    {% load staticfiles %}
+    <meta name="robots" content="noindex,follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="dns-prefetch" href="http://s.w.org/">
+    <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="{% static 'bike/css/bootstrap.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Bangers|Flamenco|Permanent+Marker|Rock+Salt" rel="stylesheet">
+
+    <link rel="alternate" type="application/rss+xml" title="Online Marketplace Â» Feed" href="http://localhost/wordpress/?feed=rss2">
+    <link rel="alternate" type="application/rss+xml" title="Online Marketplace Â» Comments Feed" href="http://localhost/wordpress/?feed=comments-rss2">
+    <script type="text/javascript">
+        window._wpemojiSettings = { "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/", "ext": ".png", "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/", "svgExt": ".svg", "source": { "concatemoji": "http:\/\/localhost\/wordpress\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.8" } };
+        !function (a, b, c) { function d(a, b) { var c = String.fromCharCode; l.clearRect(0, 0, k.width, k.height), l.fillText(c.apply(this, a), 0, 0); var d = k.toDataURL(); l.clearRect(0, 0, k.width, k.height), l.fillText(c.apply(this, b), 0, 0); var e = k.toDataURL(); return d === e } function e(a) { var b; if (!l || !l.fillText) return !1; switch (l.textBaseline = "top", l.font = "600 32px Arial", a) { case "flag": return !(b = d([55356, 56826, 55356, 56819], [55356, 56826, 8203, 55356, 56819])) && (b = d([55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447], [55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447]), !b); case "emoji": return b = d([55358, 56760, 9792, 65039], [55358, 56760, 8203, 9792, 65039]), !b }return !1 } function f(a) { var c = b.createElement("script"); c.src = a, c.defer = c.type = "text/javascript", b.getElementsByTagName("head")[0].appendChild(c) } var g, h, i, j, k = b.createElement("canvas"), l = k.getContext && k.getContext("2d"); for (j = Array("flag", "emoji"), c.supports = { everything: !0, everythingExceptFlag: !0 }, i = 0; i < j.length; i++)c.supports[j[i]] = e(j[i]), c.supports.everything = c.supports.everything && c.supports[j[i]], "flag" !== j[i] && (c.supports.everythingExceptFlag = c.supports.everythingExceptFlag && c.supports[j[i]]); c.supports.everythingExceptFlag = c.supports.everythingExceptFlag && !c.supports.flag, c.DOMReady = !1, c.readyCallback = function () { c.DOMReady = !0 }, c.supports.everything || (h = function () { c.readyCallback() }, b.addEventListener ? (b.addEventListener("DOMContentLoaded", h, !1), a.addEventListener("load", h, !1)) : (a.attachEvent("onload", h), b.attachEvent("onreadystatechange", function () { "complete" === b.readyState && c.readyCallback() })), g = c.source || {}, g.concatemoji ? f(g.concatemoji) : g.wpemoji && g.twemoji && (f(g.twemoji), f(g.wpemoji))) }(window, document, window._wpemojiSettings);
+    </script>
+    <script src="{% static 'home/marakka_files/wp-emoji-release.js' %}" type="text/javascript" defer="defer"></script>
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <link rel="stylesheet" id="dashicons-css" href="{% static 'home/marakka_files/dashicons.css' %}" type="text/css"
+        media="all">
+    <link rel="stylesheet" id="admin-bar-css" href="{% static 'home/marakka_files/admin-bar.css' %}" type="text/css"
+        media="all">
+    <link rel="stylesheet" id="elementor-icons-css" href="{% static 'home/marakka_files/elementor-icons.css' %}" type="text/css"
+        media="all">
+    <link rel="stylesheet" id="elementor-common-css" href="{% static 'home/marakka_files/common.css' %}" type="text/css"
+        media="all">
+    <link rel="stylesheet" id="font-awesome-css" href="{% static 'home/marakka_files/font-awesome.css' %}" type="text/css"
+        media="all">
+    <link rel="stylesheet" id="simple-line-icons-css" href="{% static 'home/marakka_files/simple-line-icons.css' %}"
+        type="text/css" media="all">
+    <link rel="stylesheet" id="magnific-popup-css" href="{% static 'home/marakka_files/magnific-popup.css' %}" type="text/css"
+        media="all">
+    <link rel="stylesheet" id="slick-css" href="{% static 'home/marakka_files/slick.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" id="oceanwp-style-css" href="{% static 'home/marakka_files/style.css' %}" type="text/css"
+        media="all">
+    <link rel="stylesheet" id="elementor-animations-css" href="{% static 'home/marakka_files/animations.css' %}" type="text/css"
+        media="all">
+    <link rel="stylesheet" id="elementor-frontend-css" href="{% static 'home/marakka_files/frontend.css' %}" type="text/css"
+        media="all">
+    <link rel="stylesheet" id="elementor-global-css" href="{% static 'home/marakka_files/global.css' %}" type="text/css"
+        media="all">
+    <link rel="stylesheet" id="elementor-post-396-css" href="{% static 'home/marakka_files/post-396.css' %}" type="text/css"
+        media="all">
+    <link rel="stylesheet" id="oe-widgets-style-css" href="{% static 'home/marakka_files/widgets.css' %}" type="text/css"
+        media="all">
+    <link rel="stylesheet" id="google-fonts-1-css" href="{% static 'home/marakka_files/css.css' %}" type="text/css"
+        media="all">
+    <script type="text/javascript" src="{% static 'home/marakka_files/jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'home/marakka_files/jquery-migrate.js' %}"></script>
+    <script type="text/javascript" src="{% static 'home/marakka_files/mailchimp.js' %}"></script>
+    <script type="text/javascript" src="{% static 'home/marakka_files/share.js' %}"></script>
+    <link rel="https://api.w.org/" href="http://localhost/wordpress/index.php?rest_route=/">
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://localhost/wordpress/xmlrpc.php?rsd">
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://localhost/wordpress/wp-includes/wlwmanifest.xml">
+    <meta name="generator" content="WordPress 4.9.8">
+    <link rel="canonical" href="http://localhost/wordpress/">
+    <link rel="shortlink" href="http://localhost/wordpress/">
+    <link rel="alternate" type="application/json+oembed" href="http://localhost/wordpress/index.php?rest_route=%2Foembed%2F1.0%2Fembed&amp;url=http%3A%2F%2Flocalhost%2Fwordpress%2F">
+    <style type="text/css" media="print">
+        #wpadminbar {
+            display: none;
+        }
+    </style>
+    <style type="text/css" media="screen">
+        @media screen and (max-width: 782px) {
+            html {
+                margin-top: 46px !important;
+            }
+
+            * html body {
+                margin-top: 46px !important;
+            }
+        }
+    </style>
+    <!-- OceanWP CSS -->
+    <style type="text/css">
+        /* Header CSS */
+        #site-header.has-header-media .overlay-header-media {
+            background-color: rgba(0, 0, 0, 0.5)
+        }
+
+        #site-navigation-wrap .dropdown-menu>li>a {
+            padding: 0 8px
+        }
+
+        #site-navigation-wrap .dropdown-menu>li>a,
+        .oceanwp-mobile-menu-icon a,
+        #searchform-header-replace-close {
+            color: #757575
+        }
+
+        #site-navigation-wrap .dropdown-menu>.current-menu-item>a,
+        #site-navigation-wrap .dropdown-menu>.current-menu-ancestor>a,
+        #site-navigation-wrap .dropdown-menu>.current-menu-item>a:hover,
+        #site-navigation-wrap .dropdown-menu>.current-menu-ancestor>a:hover {
+            color: #020202
+        }
+
+        #site-navigation-wrap .dropdown-menu>li>a:hover,
+        #site-navigation-wrap .dropdown-menu>li.sfHover>a {
+            background-color: rgba(221, 51, 51, 0.37)
+        }
+
+        mar {
+            margin-right: 4rem
+        }
+
+        tcen {
+            text-align: center;
+        }
+
+        /* Typography CSS */
+        h1 {
+            font-size: 28px
+        }
+
+        #site-logo a.site-logo-text {
+            font-size: 43px;
+            line-height: 1.4
+        }
+
+        #site-navigation-wrap .dropdown-menu>li>a,
+        #site-header.full_screen-header .fs-dropdown-menu>li>a,
+        #site-header.top-header #site-navigation-wrap .dropdown-menu>li>a,
+        #site-header.center-header #site-navigation-wrap .dropdown-menu>li>a,
+        #site-header.medium-header #site-navigation-wrap .dropdown-menu>li>a,
+        .oceanwp-mobile-menu-icon a {
+            font-size: 14px;
+            letter-spacing: 2.7px;
+            text-transform: uppercase
+        }
+    </style>
+    <style id="fit-vids-style">
+        .fluid-width-video-wrapper {
+            width: 100%;
+            position: relative;
+            padding: 0;
+        }
+
+        .fluid-width-video-wrapper iframe,
+        .fluid-width-video-wrapper object,
+        .fluid-width-video-wrapper embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body class="home page-template-default page page-id-396 logged-in admin-bar oceanwp-theme sidebar-mobile default-breakpoint content-full-screen page-header-disabled has-breadcrumbs no-margins elementor-default elementor-page elementor-page-396 customize-support"
+    data-elementor-device-mode="desktop">
+    {% load staticfiles %}
+
+    <div id="outer-wrap" class="site clr">
+
+
+        <div id="wrap" class="clr">
+
+
+
+            <header id="site-header" class="minimal-header clr" data-height="74" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+
+
+
+
+                <div id="site-header-inner" class="clr container">
+
+
+
+
+                    <div id="site-logo" class="clr" itemscope="" itemtype="http://schema.org/Brand">
+
+
+                        <div id="site-logo-inner" class="clr">
+
+
+                            <a href="{% url 'home:index' %}" rel="home" class="site-title site-logo-text" style="font-family: 'Permanent Marker', cursive;font-size: 4.5rem">Online
+                                Marketplace</a>
+
+
+                        </div><!-- #site-logo-inner -->
+
+
+
+                    </div><!-- #site-logo -->
+
+                    <div id="site-navigation-wrap" class="clr">
+
+
+
+                        <nav id="site-navigation" class="navigation main-navigation clr" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+
+                            <ul id="menu-main" class="main-menu dropdown-menu sf-menu sf-js-enabled" style="touch-action: pan-y;">
+                                <li id="menu-item-22" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-22"><a
+                                        href="{% url 'home:index' %}" class="menu-link"><span class="text-wrap">Home</span></a></li>
+                                <li id="menu-item-220" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-220"><a
+                                        href="{% url 'bike:index' %}" class="menu-link sf-with-ul"><span class="text-wrap">Buy
+                                            <span class="nav-arrow fa fa-angle-down"></span></span></a>
+                                    <ul class="sub-menu" style="display: none;">
+                                        <li id="menu-item-225" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-225"><a
+                                                href="{% url 'home:types' 'Bikes' %}" class="menu-link"><span class="text-wrap">Bikes</span></a></li>
+                                        <li id="menu-item-224" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-224"><a
+                                                href="{% url 'home:types' 'Mopeds' %}" class="menu-link"><span class="text-wrap">Mopeds</span></a></li>
+                                        <li id="menu-item-226" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-226"><a
+                                                href="{% url 'home:types' 'Bikes' %}" class="menu-link"><span class="text-wrap">Scooters</span></a></li>
+                                        <li id="menu-item-227" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-227"><a
+                                                href="{% url 'home:types' 'Bikes' %}" class="menu-link"><span class="text-wrap">Bicycles</span></a></li>
+                                    </ul>
+                                </li>
+                                <li id="menu-item-221" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-221"><a
+                                        href="{% url 'bike:bike-add' %}" class="menu-link"><span class="text-wrap">Sell</span></a></li>
+                                <li id="menu-item-222" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-222"><a
+                                        href="#" class="menu-link"><span class="text-wrap">About</span></a></li>
+                                <li id="menu-item-223" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-223"><a
+                                        href="#" class="menu-link"><span class="text-wrap">Contact</span></a></li>
+
+
+
+                                {% if not user.is_authenticated %}
+                                <li id="menu-item-221" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-221"><a
+                                        href="{% url 'home:login' %}" class="menu-link"><span class="text-wrap">Login</span></a></li>
+                                {% else %}
+                                <li id="menu-item-220" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-220"><a
+                                        href="{% url 'home:acc-details' %}" class="menu-link sf-with-ul"><span class="text-wrap">Accounts
+                                            <span class="nav-arrow fa fa-angle-down"></span></span></a>
+                                    <ul class="sub-menu" style="display: none;">
+                                        <li id="menu-item-225" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-225"><a
+                                                href="{% url 'home:acc-details' %}" class="menu-link"><span class="text-wrap">View
+                                                    Profile</span></a></li>
+                                        <li id="menu-item-224" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-224"><a
+                                                href="{% url 'bike:bike-upload' %}" class="menu-link"><span class="text-wrap">Registered
+                                                    vehicle status</span></a></li>
+                                        <li id="menu-item-226" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-226"><a
+                                                href="{% url 'home:user-logout' %}" class="menu-link"><span class="text-wrap">Logout</span></a></li>
+                                    </ul>
+                                </li>
+                                {% endif %}
+                                <li class="search-toggle-li"><a href="#" class="site-search-toggle search-dropdown-toggle"><i
+                                            class="fa fa-search"></i></a></li>
+                            </ul>
+                            <div id="searchform-dropdown" class="header-searchform-wrap clr">
+
+                                <form method="get" class="searchform" id="searchform" action="http://localhost/wordpress/">
+                                    <input type="text" class="field" name="s" id="s" placeholder="Search">
+                                </form>
+                            </div><!-- #searchform-dropdown -->
+                        </nav><!-- #site-navigation -->
+
+
+
+                    </div><!-- #site-navigation-wrap -->
+
+
+
+
+                    <div class="oceanwp-mobile-menu-icon clr mobile-right">
+
+
+
+
+                        <a href="#" class="mobile-menu">
+                            <i class="fa fa-bars"></i>
+                            <span class="oceanwp-text">Menu</span>
+
+                        </a>
+
+
+
+
+                    </div><!-- #oceanwp-mobile-menu-navbar -->
+
+
+                </div><!-- #site-header-inner -->
+
+
+
+                {% block body %}
+                {% endblock %}
+
+            </header><!-- #site-header -->
+        </div><!-- #wrap -->
+
+
+    </div><!-- #outer-wrap -->
+
+
+
+    <a id="scroll-top" class="scroll-top-right" href="#" style="display: none;"><span class="fa fa-angle-up"></span></a>
+
+
+    <div id="sidr-close">
+        <a href="#" class="toggle-sidr-close">
+            <i class="icon icon-close"></i><span class="close-text">Close Menu</span>
+        </a>
+    </div>
+
+
+    <div id="mobile-menu-search" class="clr">
+        <form method="get" action="http://localhost/wordpress/" class="mobile-searchform">
+            <input type="search" name="s" autocomplete="off" placeholder="Search">
+            <button type="submit" class="searchform-submit">
+                <i class="icon icon-magnifier"></i>
+            </button>
+        </form>
+    </div><!-- .mobile-menu-search -->
+
+    <script type="text/template" id="tmpl-elementor-templates-modal__header">
+	<div class="elementor-templates-modal__header__logo-area"></div>
+	<div class="elementor-templates-modal__header__menu-area"></div>
+	<div class="elementor-templates-modal__header__items-area">
+
+{% verbatim %}
+		<# if ( closeType ) { #>
+			<div class="elementor-templates-modal__header__close elementor-templates-modal__header__close--{{{ closeType }}} elementor-templates-modal__header__item">
+				<# if ( 'skip' === closeType ) { #>
+				<span>Skip</span>
+				<# } #>
+				<i class="eicon-close" aria-hidden="true" title="Close"></i>
+				<span class="elementor-screen-only">Close</span>
+			</div>
+        <# } #>
+		<div id="elementor-template-library-header-tools"></div>
+	</div>
+</script>
+
+    <script type="text/template" id="tmpl-elementor-templates-modal__header__logo">
+	<span class="elementor-templates-modal__header__logo__icon-wrapper">
+		<i class="eicon-elementor"></i>
+    </span>
+    <span class="elementor-templates-modal__header__logo__title">{{{ title }}}</span>
+</script>
+    <script type="text/template" id="tmpl-elementor-finder">
+	<div id="elementor-finder__search">
+		<i class="eicon-search"></i>
+		<input id="elementor-finder__search__input" placeholder="Type to find anything in Elementor">
+	</div>
+	<div id="elementor-finder__content"></div>
+</script>
+
+    <script type="text/template" id="tmpl-elementor-finder-results-container">
+	<div id="elementor-finder__no-results">No Results Found</div>
+	<div id="elementor-finder__results"></div>
+</script>
+
+    <script type="text/template" id="tmpl-elementor-finder__results__category">
+	<div class="elementor-finder__results__category__title">{{{ title }}}</div>
+	<div class="elementor-finder__results__category__items"></div>
+</script>
+
+    <script type="text/template" id="tmpl-elementor-finder__results__item">
+	<a href="{{ url }}" class="elementor-finder__results__item__link">
+		<div class="elementor-finder__results__item__icon">
+			<i class="eicon-{{{ icon }}}"></i>
+		</div>
+		<div class="elementor-finder__results__item__title">{{{ title }}}</div>
+		<# if ( description ) { #>
+			<div class="elementor-finder__results__item__description">- {{{ description }}}</div>
+		<# } #>
+	</a>
+	<# if ( actions.length ) { #>
+		<div class="elementor-finder__results__item__actions">
+		<# jQuery.each( actions, function() { #>
+			<a class="elementor-finder__results__item__action elementor-finder__results__item__action--{{ this.name }}" href="{{ this.url }}" target="_blank">
+				<i class="eicon-{{{ this.icon }}}"></i>
+			</a>
+		<# } ); #>
+		</div>
+    <# } #>
+    {% endverbatim %}
+</script>
+    <script type="text/javascript" src="{% static 'home/marakka_files/admin-bar.js' %}"></script>
+    <script type="text/javascript" src="{% static 'home/marakka_files/imagesloaded.js' %}"></script>
+    <script type="text/javascript" src="{% static 'home/marakka_files/magnific-popup.js' %}"></script>
+    <script type="text/javascript" src="{% static 'home/marakka_files/lightbox.js' %}"></script>
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        var oceanwpLocalize = { "isRTL": "", "menuSearchStyle": "drop_down", "sidrSource": "#sidr-close, #site-navigation, #mobile-menu-search", "sidrDisplace": "1", "sidrSide": "left", "sidrDropdownTarget": "icon", "verticalHeaderTarget": "icon", "customSelects": ".woocommerce-ordering .orderby, #dropdown_product_cat, .widget_categories select, .widget_archive select, .single-product .variations_form .variations select", "ajax_url": "http:\/\/localhost\/wordpress\/wp-admin\/admin-ajax.php" };
+/* ]]> */
+    </script>
+    <script type="text/javascript" src="{% static 'home/marakka_files/main.js' %}">   </script>
+    <script type="text/javascript" src="{% static 'home/marakka_files/core.js' %}">   </script>
+    <script type="text/javascript" src="{% static 'home/marakka_files/widget.js' %}">   </script>
+    <script type="text/javascript" src="{% static 'home/marakka_files/mouse.js' %}">   </script>
+    <script type="text/javascript" src="{% static 'home/marakka_files/draggable.js' %}">   </script>
+    <script type="text/javascript" src="{% static 'home/marakka_files/underscore.js' %}"> </script>
+    <script type="text/javascript" src="{% static 'home/marakka_files/backbone_002.js' %}"></script>
+    <script type="text/javascript" src="{% static 'home/marakka_files/backbone.js' %}"></script>
+    <script type="text/javascript" src="{% static 'home/marakka_files/backbone_003.js' %}">   </script>
+    <script type="text/javascript" src="{% static 'home/marakka_files/position.js' %}">   </script>
+    <script type="text/javascript" src="{% static 'home/marakka_files/dialog.js' %}"></script>
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        var elementorCommonConfig = { "version": "2.3.2", "isRTL": "", "activeModules": ["ajax", "finder", "connect"], "urls": { "assets": "http:\/\/localhost\/wordpress\/wp-content\/plugins\/elementor\/assets\/" }, "ajax": { "url": "http:\/\/localhost\/wordpress\/wp-admin\/admin-ajax.php", "nonce": "dedd922d2d" }, "finder": { "data": { "edit": { "title": "Edit", "dynamic": true, "name": "edit" }, "general": { "title": "General", "dynamic": false, "items": { "my-templates": { "title": "My Templates", "icon": "library-save", "url": "http:\/\/localhost\/wordpress\/wp-admin\/edit.php?post_type=elementor_library", "keywords": ["template", "header", "footer", "single", "archive", "search", "404 page"] }, "system-info": { "title": "System Info", "icon": "info", "url": "http:\/\/localhost\/wordpress\/wp-admin\/admin.php?page=elementor-system-info", "keywords": ["system", "info", "environment", "elementor"] }, "role-manager": { "title": "Role Manager", "icon": "person", "url": "http:\/\/localhost\/wordpress\/wp-admin\/admin.php?page=elementor-role-manager", "keywords": ["role", "manager", "user", "elementor"] }, "knowledge-base": { "title": "Knowledge Base", "url": "http:\/\/localhost\/wordpress\/wp-admin\/admin.php?page=go_knowledge_base_site", "keywords": ["help", "knowledge", "docs", "elementor"] } }, "name": "general" }, "create": { "title": "Create", "dynamic": false, "items": { "post": { "title": "Add New Post", "icon": "plus-circle", "url": "http:\/\/localhost\/wordpress\/wp-admin\/edit.php?action=elementor_new_post&post_type=post&_wpnonce=40f6cefbba", "keywords": ["post", "page", "template", "new", "create"] }, "page": { "title": "Add New Page", "icon": "plus-circle", "url": "http:\/\/localhost\/wordpress\/wp-admin\/edit.php?action=elementor_new_post&post_type=page&_wpnonce=40f6cefbba", "keywords": ["post", "page", "template", "new", "create"] }, "elementor_library": { "title": "Add New Template", "icon": "plus-circle", "url": "http:\/\/localhost\/wordpress\/wp-admin\/edit.php?post_type=elementor_library#add_new", "keywords": ["post", "page", "template", "new", "create"] }, "envato_kits": { "title": "Add New Imported Kit", "icon": "plus-circle", "url": "http:\/\/localhost\/wordpress\/wp-admin\/edit.php?action=elementor_new_post&post_type=envato_kits&_wpnonce=40f6cefbba", "keywords": ["post", "page", "template", "new", "create"] }, "oceanwp_library": { "title": "Add New Template", "icon": "plus-circle", "url": "http:\/\/localhost\/wordpress\/wp-admin\/edit.php?action=elementor_new_post&post_type=oceanwp_library&_wpnonce=40f6cefbba", "keywords": ["post", "page", "template", "new", "create"] } }, "name": "create" }, "site": { "title": "Site", "dynamic": false, "items": { "homepage": { "title": "Homepage", "url": "http:\/\/localhost\/wordpress", "icon": "home-heart", "keywords": ["home", "page"] }, "wordpress-dashboard": { "title": "Dashboard", "icon": "dashboard", "url": "http:\/\/localhost\/wordpress\/wp-admin\/", "keywords": ["dashboard", "wordpress"] }, "wordpress-menus": { "title": "Menus", "icon": "wordpress", "url": "http:\/\/localhost\/wordpress\/wp-admin\/nav-menus.php", "keywords": ["menu", "wordpress"] }, "wordpress-customizer": { "title": "Customizer", "icon": "wordpress", "url": "http:\/\/localhost\/wordpress\/wp-admin\/customize.php", "keywords": ["customizer", "wordpress"] }, "wordpress-plugins": { "title": "Plugins", "icon": "wordpress", "url": "http:\/\/localhost\/wordpress\/wp-admin\/plugins.php", "keywords": ["plugins", "wordpress"] }, "wordpress-users": { "title": "Users", "icon": "wordpress", "url": "http:\/\/localhost\/wordpress\/wp-admin\/users.php", "keywords": ["users", "profile", "wordpress"] } }, "name": "site" }, "settings": { "title": "Settings", "dynamic": false, "items": { "general-settings": { "title": "General Settings", "url": "http:\/\/localhost\/wordpress\/wp-admin\/admin.php?page=elementor", "keywords": ["general", "settings", "elementor"] }, "style": { "title": "Style", "url": "http:\/\/localhost\/wordpress\/wp-admin\/admin.php?page=elementor#tab-style", "keywords": ["style", "settings", "elementor"] }, "advanced": { "title": "Advanced", "url": "http:\/\/localhost\/wordpress\/wp-admin\/admin.php?page=elementor#tab-advanced", "keywords": ["advanced", "settings", "elementor"] } }, "name": "settings" }, "tools": { "title": "Tools", "dynamic": false, "items": { "tools": { "title": "Tools", "icon": "tools", "url": "http:\/\/localhost\/wordpress\/wp-admin\/admin.php?page=elementor-tools", "keywords": ["tools", "elementor"] }, "replace-url": { "title": "Replace URL", "icon": "tools", "url": "http:\/\/localhost\/wordpress\/wp-admin\/admin.php?page=elementor-tools#tab-replace_url", "keywords": ["tools", "replace url", "domain", "elementor"] }, "version-control": { "title": "Version Control", "icon": "time-line", "url": "http:\/\/localhost\/wordpress\/wp-admin\/admin.php?page=elementor-tools#tab-versions", "keywords": ["tools", "version", "control", "beta", "elementor"] }, "maintenance-mode": { "title": "Maintenance Mode", "icon": "tools", "url": "http:\/\/localhost\/wordpress\/wp-admin\/admin.php?page=elementor-tools#tab-maintenance_mode", "keywords": ["tools", "maintenance", "coming soon", "elementor"] } }, "name": "tools" } }, "i18n": { "finder": "Finder" } }, "connect": [] };
+/* ]]> */
+    </script>
+    <script type="text/javascript" src="{% static 'home/marakka_files/common.js' %}"></script>
+    <script type="text/javascript" src="{% static 'home/marakka_files/wp-embed.js' %}"></script>
+    <!--[if lt IE 9]>
+<script type='text/javascript' src='http://localhost/wordpress/wp-content/themes/oceanwp/assets/js//third/html5.min.js?ver=1.5.32'></script>
+<![endif]-->
+    <script type="text/javascript" src="{% static 'home/marakka_files/waypoints.js' %}"></script>
+    <script type="text/javascript" src="{% static 'home/marakka_files/swiper.js' %}"></script>
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        var elementorFrontendConfig = { "isEditMode": "", "is_rtl": "", "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "version": "2.3.2", "urls": { "assets": "http:\/\/localhost\/wordpress\/wp-content\/plugins\/elementor\/assets\/" }, "settings": { "page": [], "general": { "elementor_global_image_lightbox": "yes", "elementor_enable_lightbox_in_editor": "yes" } }, "post": { "id": 396, "title": "Home", "excerpt": "" } };
+/* ]]> */
+    </script>
+    <script type="text/javascript" src="{% static 'home/marakka_files/frontend.js' %}"></script>
+    <!--[if lte IE 8]>
+		<script type="text/javascript">
+			document.body.className = document.body.className.replace( /(^|\s)(no-)?customize-support(?=\s|$)/, '' ) + ' no-customize-support';
+		</script>
+	<![endif]-->
+    <!--[if gte IE 9]><!-->
+    <script type="text/javascript">
+        (function () {
+            var request, b = document.body, c = 'className', cs = 'customize-support', rcs = new RegExp('(^|\\s+)(no-)?' + cs + '(\\s+|$)');
+
+            request = true;
+
+            b[c] = b[c].replace(rcs, ' ');
+            // The customizer requires postMessage and CORS (if the site is cross domain)
+            b[c] += (window.postMessage && request ? ' ' : ' no-') + cs;
+        }());
+    </script>
+    <!--<![endif]-->
+    <div id="sidr" style="transition: left 0.3s ease 0s;" class="sidr left">
+        <div class="sidr-inner">
+            <a href="#" class="sidr-class-toggle-sidr-close">
+                <span class="sidr-class-close-text">Close Menu</span>
+            </a>
+        </div>
+        <div class="sidr-inner">
+
+            <ul id="sidr-id-menu-main" class="sidr-class-main-menu sidr-class-dropdown-menu sidr-class-sf-menu">
+                <li id="sidr-id-menu-item-22" class="sidr-class-menu-item sidr-class-menu-item-type-custom sidr-class-menu-item-object-custom sidr-class-current-menu-item sidr-class-current_page_item sidr-class-menu-item-home sidr-class-menu-item-22"><a
+                        href="http://localhost/wordpress" class="sidr-class-menu-link"><span class="sidr-class-text-wrap">Home</span></a></li>
+                <li id="sidr-id-menu-item-220" class="sidr-class-menu-item sidr-class-menu-item-type-custom sidr-class-menu-item-object-custom sidr-class-menu-item-has-children sidr-class-dropdown sidr-class-menu-item-220"><a
+                        href="http://#" class="sidr-class-menu-link"><span class="sidr-class-text-wrap">Buy <span class="sidr-class-nav-arrow fa fa-angle-down"></span></span></a>
+                    <ul class="sidr-class-sub-menu">
+                        <li id="sidr-id-menu-item-225" class="sidr-class-menu-item sidr-class-menu-item-type-custom sidr-class-menu-item-object-custom sidr-class-menu-item-225"><a
+                                href="http://#" class="sidr-class-menu-link"><span class="sidr-class-text-wrap">Bikes</span></a></li>
+                        <li id="sidr-id-menu-item-224" class="sidr-class-menu-item sidr-class-menu-item-type-custom sidr-class-menu-item-object-custom sidr-class-menu-item-224"><a
+                                href="http://#" class="sidr-class-menu-link"><span class="sidr-class-text-wrap">Mopeds</span></a></li>
+                        <li id="sidr-id-menu-item-226" class="sidr-class-menu-item sidr-class-menu-item-type-custom sidr-class-menu-item-object-custom sidr-class-menu-item-226"><a
+                                href="http://#" class="sidr-class-menu-link"><span class="sidr-class-text-wrap">Scooters</span></a></li>
+                        <li id="sidr-id-menu-item-227" class="sidr-class-menu-item sidr-class-menu-item-type-custom sidr-class-menu-item-object-custom sidr-class-menu-item-227"><a
+                                href="http://#" class="sidr-class-menu-link"><span class="sidr-class-text-wrap">Bicycles</span></a></li>
+                    </ul>
+                </li>
+                <li id="sidr-id-menu-item-221" class="sidr-class-menu-item sidr-class-menu-item-type-custom sidr-class-menu-item-object-custom sidr-class-menu-item-221"><a
+                        href="http://#" class="sidr-class-menu-link"><span class="sidr-class-text-wrap">Sell</span></a></li>
+                <li id="sidr-id-menu-item-222" class="sidr-class-menu-item sidr-class-menu-item-type-custom sidr-class-menu-item-object-custom sidr-class-menu-item-222"><a
+                        href="http://#" class="sidr-class-menu-link"><span class="sidr-class-text-wrap">About</span></a></li>
+                <li id="sidr-id-menu-item-223" class="sidr-class-menu-item sidr-class-menu-item-type-custom sidr-class-menu-item-object-custom sidr-class-menu-item-223"><a
+                        href="http://#" class="sidr-class-menu-link"><span class="sidr-class-text-wrap">Contact</span></a></li>
+                <li id="sidr-id-menu-item-223" class="sidr-class-menu-item sidr-class-menu-item-type-custom sidr-class-menu-item-object-custom sidr-class-menu-item-223"><a
+                        href="http://#" class="sidr-class-menu-link"><span class="sidr-class-text-wrap">Login</span></a></li>
+                <li id="sidr-id-menu-item-223" class="sidr-class-menu-item sidr-class-menu-item-type-custom sidr-class-menu-item-object-custom sidr-class-menu-item-223"><a
+                        href="http://#" class="sidr-class-menu-link"><span class="sidr-class-text-wrap">Logout</span></a></li>
+                <li class="sidr-class-search-toggle-li"><a href="#" class="sidr-class-site-search-toggle sidr-class-search-dropdown-toggle"><i
+                            class="fa fa-search"></i></a></a></li>
+            </ul>
+            <div id="sidr-id-searchform-dropdown" class="sidr-class-header-searchform-wrap sidr-class-clr">
+
+                <form method="get" class="sidr-class-searchform" id="sidr-id-searchform" action="http://localhost/wordpress/">
+                    <input type="text" class="sidr-class-field" name="s" id="sidr-id-s" placeholder="Search">
+                </form>
+            </div><!-- #searchform-dropdown -->
+        </div>
+        <div class="sidr-inner">
+            <form method="get" action="http://localhost/wordpress/" class="sidr-class-mobile-searchform">
+                <input type="search" name="s" autocomplete="off" placeholder="Search">
+                <button type="submit" class="sidr-class-searchform-submit">
+                    <i class="sidr-class-icon icon-magnifier"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+</body>
+<footer id="footer" class="site-footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+
+
+    <div id="footer-inner" class="clr">
+
+
+
+        <div id="footer-widgets" class="oceanwp-row clr">
+
+
+            <div class="footer-widgets-inner container mar">
+
+                <div class="footer-box span_1_of_4 col col-1">
+                    <div id="ocean_contact_info-1" class="footer-widget widget-oceanwp-contact-info clr">
+                        <h4 class="widget-title">Contact Info</h4>
+                        <ul class="contact-info-widget default">
+                            <li class="text">To reach us</li>
+                            <li class="address"><i class="icon-location-pin"></i>
+                                <div class="oceanwp-info-wrap"><span class="oceanwp-contact-title">Address:</span><span
+                                        class="oceanwp-contact-text">Kakkanad,
+                                        Kerala</span></div>
+                            </li>
+                            <li class="phone"><i class="icon-phone"></i>
+                                <div class="oceanwp-info-wrap"><span class="oceanwp-contact-title">Phone:</span><span
+                                        class="oceanwp-contact-text">+91-8943145293</span></div>
+                            </li>
+                            <li class="email"><i class="icon-envelope"></i>
+                                <div class="oceanwp-info-wrap"><span class="oceanwp-contact-title">Email:</span><span
+                                        class="oceanwp-contact-text"><a href="mailto:contact@marketplace.com">contact@support.com</a></span></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!-- .footer-one-box -->
+
+                <div class="footer-box span_1_of_4 col col-3 mar">
+                    <div id="ocean_custom_links-1" class="footer-widget widget-oceanwp-custom-links custom-links-widget clr">
+                        <h4 class="widget-title">Store</h4>
+                        <ul class="oceanwp-custom-links">
+                            <li><a href="#" target="_blank">Bikes</a></li>
+                            <li><a href="#" target="_blank">Scooters</a></li>
+                            <li><a href="#" target="_blank">Mopeds</a></li>
+                            <li><a href="#" target="_blank">Bicycles</a></li>
+                        </ul>
+                    </div>
+                    <div id="ocean_custom_links-2" class="footer-widget widget-oceanwp-custom-links custom-links-widget clr">
+                        <h4 class="widget-title">Useful Links</h4>
+                        <ul class="oceanwp-custom-links">
+                            <li><a href="#" target="_self">About The Company</a></li>
+                            <li><a href="#" target="_self">Contact Us</a></li>
+                            <li><a href="#" target="_self">Terms &amp; Conditions</a></li>
+                            <li><a href="#" target="_self">Frequently Asked Questions</a></li>
+                        </ul>
+                    </div>
+                </div><!-- .footer-one-box -->
+
+                <div class="footer-box span_1_of_4 col col-4 mar">
+                    <div id="ocean_social-1" class="footer-widget widget-oceanwp-social social-widget clr">
+                        <h4 class="widget-title">Follow Us</h4>
+                        <ul class="oceanwp-social-icons float style-light">
+                            <li class="oceanwp-twitter"><a href="#" title="Twitter" style="height:48px;width:48px;line-height:48px;font-size:13px;border-radius:50%;"
+                                    target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            <li class="oceanwp-facebook"><a href="#" title="Facebook" style="height:48px;width:48px;line-height:48px;font-size:13px;border-radius:50%;"
+                                    target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li class="oceanwp-instagram"><a href="#" title="Instagram" style="height:48px;width:48px;line-height:48px;font-size:13px;border-radius:50%;"
+                                    target="_blank"><i class="fa fa-instagram"></i></a></li>
+                            <li class="oceanwp-google-plus"><a href="#" title="GooglePlus" style="height:48px;width:48px;line-height:48px;font-size:13px;border-radius:50%;"
+                                    target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                            <li class="oceanwp-linkedin"><a href="#" title="LinkedIn" style="height:48px;width:48px;line-height:48px;font-size:13px;border-radius:50%;"
+                                    target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                            <li class="oceanwp-pinterest"><a href="#" title="Pinterest" style="height:48px;width:48px;line-height:48px;font-size:13px;border-radius:50%;"
+                                    target="_blank"><i class="fa fa-pinterest-p"></i></a></li>
+                            <li class="oceanwp-vimeo"><a href="#" title="Vimeo" style="height:48px;width:48px;line-height:48px;font-size:13px;border-radius:50%;"
+                                    target="_blank"><i class="fa fa-vimeo"></i></a></li>
+                            <li class="oceanwp-vine"><a href="#" title="Vine" style="height:48px;width:48px;line-height:48px;font-size:13px;border-radius:50%;"
+                                    target="_blank"><i class="fa fa-vine"></i></a></li>
+                            <li class="oceanwp-youtube"><a href="#" title="Youtube" style="height:48px;width:48px;line-height:48px;font-size:13px;border-radius:50%;"
+                                    target="_blank"><i class="fa fa-youtube-play"></i></a></li>
+                            <li class="oceanwp-rss"><a href="#" title="RSS" style="height:48px;width:48px;line-height:48px;font-size:13px;border-radius:50%;"
+                                    target="_blank"><i class="fa fa-rss"></i></a></li>
+                        </ul>
+                    </div>
+                </div><!-- .footer-box -->
+
+
+            </div><!-- .container -->
+
+
+        </div><!-- #footer-widgets -->
+    </div><!-- #footer-inner -->
+
+
+</footer><!-- #footer -->
+
+</html>

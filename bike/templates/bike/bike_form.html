@@ -1,0 +1,138 @@
+{% extends 'home/base.html' %}
+
+{% block title %}Add Vehicle{% endblock %}
+
+{% block body %}
+<div class="container">
+        <div class="row">
+            <div class="col-9 col-centered" style="margin-top: 3rem">
+                <div class="card" style="width: 100%;">
+                    <form method="post" action="" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="card-body">
+
+                            <h3 class="text-center mt-3">Vehicle Registration</h3>
+                            <div class="row mt-5">
+                                <div class="col">
+                                    <div class="mt-4 ml-3 h5">Model Name</div>
+                                    <div class="input-group col-10">
+                                        {{ form.Model_name }}
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="mt-4 ml-3 h5">Company Name</div>
+                                    <div class="input-group col-10">
+                                        {{ form.Company_name }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-3 pr-1">
+                                    <div class="mt-3 ml-3 pr-1 h5">No of Owners</div>
+                                </div>
+                                <div class="col-1 left mt-2 pl-1">
+                                    <div class="input-group left">
+
+                                        <input class="form-control py-2 border" type="search">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-3 pr-1">
+                                    <div class="mt-3 ml-3 pr-1 h5">Kilometers Run</div>
+                                </div>
+                                <div class="col-3 left mt-2 pl-1">
+                                    <div class="input-group left">
+                                        {{ form.Total_km }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="mt-3 ml-3 h5">Condition</div>
+                                    <div class="input-group col-10">
+                                        {{ form.Description }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-3 ml-3 h5">Uploads</div>
+                            <div class="row">
+                                <div class="col-4 right mt-1">
+                                    <span class="mt-1">Front View :</span>
+                                </div>
+                                <div class="col-2 text-center">
+                                    {{ form.Model_img }}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4 right mt-1">
+                                    <span class="mt-1">Left Side View :</span>
+                                </div>
+                                <div class="col-2 text-center">
+                                    {{ form.Left_side }}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4 right mt-1">
+                                    <span class="mt-1">Right Side View :</span>
+                                </div>
+                                <div class="col-2 text-center">
+                                    {{ form.Right_side }}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4 right mt-1">
+                                    <span class="mt-1">RC BOOK :</span>
+                                </div>
+                                <div class="col-2 text-center">
+                                    {{ form.Rc_book }}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4 right mt-1">
+                                    <span class="mt-1">Kilometers Run :</span>
+                                </div>
+                                <div class="col-2 text-center">
+                                    {{ form.Km_Image }}
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-3 pr-1 ml-4">
+                                <div class="mt-3 ml-3 pr-1 h5">Original Price</div>
+                            </div>
+                            <div class="col-3 left mt-2 pl-1">
+                                <div class="input-group left">
+                                    {{ form.Price_before }}
+                                </div>
+                            </div>
+                        </div>
+
+                            <div class="row mt-2">
+                            <div class="col-3 pr-1 ml-4">
+                                <div class="mt-3 ml-3 pr-1 h5">Requested Price</div>
+                            </div>
+                            <div class="col-3 left mt-2 pl-1">
+                                <div class="input-group left">
+                                    {{ form.Price_after }}
+                                </div>
+                            </div>
+                            </div>
+                        <div class="form-group">
+                            <div class="col-12 text-center mt-5 mb-4">
+                                <a href="{% url 'home:login' %}">
+                                    <button type="submit" class="btn btn-success btn-lg">Submit<i class="far fa-thumbs-up ml-2"></i></button>
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

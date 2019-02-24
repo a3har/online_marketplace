@@ -1,0 +1,376 @@
+{% extends 'home/base.html' %}
+
+{% block body %}
+{% load staticfiles %}
+
+<link rel="stylesheet" id="dashicons-css" href="{% static 'about_files/dashicons.css' %}" type="text/css" media="all">
+<link rel="stylesheet" id="admin-bar-css" href="{% static 'about_files/admin-bar.css' %}" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-icons-css" href="{% static 'about_files/elementor-icons.css' %}" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-common-css" href="{% static 'about_files/common.css' %}" type="text/css" media="all">
+<link rel="stylesheet" id="font-awesome-css" href="{% static 'about_files/font-awesome.css' %}" type="text/css" media="all">
+<link rel="stylesheet" id="simple-line-icons-css" href="{% static 'about_files/simple-line-icons.css' %}" type="text/css" media="all">
+<link rel="stylesheet" id="magnific-popup-css" href="{% static 'about_files/magnific-popup.css' %}" type="text/css" media="all">
+<link rel="stylesheet" id="slick-css" href="{% static 'about_files/slick.css' %}" type="text/css" media="all">
+<link rel="stylesheet" id="oceanwp-style-css" href="{% static 'about_files/style.css' %}" type="text/css" media="all">
+<link rel="stylesheet" id="oceanwp-google-font-permanent-marker-css" href="{% static 'about_files/css_002.css' %}" type="text/css"
+ media="all">
+<link rel="stylesheet" id="elementor-animations-css" href="{% static 'about_files/animations.css' %}" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-frontend-css" href="{% static 'about_files/frontend.css' %}" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-global-css" href="{% static 'about_files/global.css' %}" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-post-396-css" href="{% static 'about_files/post-396.css' %}" type="text/css" media="all">
+<link rel="stylesheet" id="oe-widgets-style-css" href="{% static 'about_files/widgets.css' %}" type="text/css" media="all">
+<link rel="stylesheet" id="google-fonts-1-css" href="{% static 'about_files/css.css' %}" type="text/css" media="all">
+<script type="text/javascript" src="{% static 'about_files/jquery.js"></script>
+<script type="text/javascript" src="{% static 'about_files/jquery-migrate.js"></script>
+<script type="text/javascript" src="{% static 'about_files/mailchimp.js"></script>
+<script type="text/javascript" src="{% static 'about_files/share.js"></script>
+<link rel="https://api.w.org/" href="http://localhost/wordpress/index.php?rest_route=/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://localhost/wordpress/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://localhost/wordpress/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 4.9.8">
+<link rel="canonical" href="http://localhost/wordpress/">
+<link rel="shortlink" href="http://localhost/wordpress/">
+<link rel="alternate" type="application/json+oembed" href="http://localhost/wordpress/index.php?rest_route=%2Foembed%2F1.0%2Fembed&amp;url=http%3A%2F%2Flocalhost%2Fwordpress%2F">
+<style type="text/css" media="print">
+	#wpadminbar {
+		display: none;
+	}
+</style>
+<style type="text/css" media="screen">
+	html {
+		margin-top: 32px !important;
+	}
+
+	* html body {
+		margin-top: 32px !important;
+	}
+
+	@media screen and (max-width: 782px) {
+		html {
+			margin-top: 46px !important;
+		}
+
+		* html body {
+			margin-top: 46px !important;
+		}
+	}
+</style>
+<style type="text/css" id="wp-custom-css">
+	/** Start Envato Elements CSS:Blocks (144-3-3a7d335f39a8579c20cdf02f8d462582) **/
+	.envato-block__preview {
+		overflow: visible
+	}
+
+	/* Envato Kit 141 Custom Styles - Applied to the element under Advanced */
+	.elementor-headline-animation-type-drop-in .elementor-headline-dynamic-wrapper {
+		text-align: center
+	}
+
+	.envato-kit-141-top-0 h1,
+	.envato-kit-141-top-0 h2,
+	.envato-kit-141-top-0 h3,
+	.envato-kit-141-top-0 h4,
+	.envato-kit-141-top-0 h5,
+	.envato-kit-141-top-0 h6,
+	.envato-kit-141-top-0 p {
+		margin-top: 0
+	}
+
+	.envato-kit-141-newsletter-inline .elementor-field-textual.elementor-size-md {
+		padding-left: 1.5rem;
+		padding-right: 1.5rem
+	}
+
+	.envato-kit-141-bottom-0 p {
+		margin-bottom: 0
+	}
+
+	.envato-kit-141-bottom-8 .elementor-price-list .elementor-price-list-item .elementor-price-list-header {
+		margin-bottom: .5rem
+	}
+
+	.envato-kit-141.elementor-widget-testimonial-carousel.elementor-pagination-type-bullets .swiper-container {
+		padding-bottom: 52px
+	}
+
+	.envato-kit-141-display-inline {
+		display: inline-block
+	}
+
+	.envato-kit-141 .elementor-slick-slider ul.slick-dots {
+		bottom: -40px
+	}
+
+	/** End Envato Elements CSS:Blocks (144-3-3a7d335f39a8579c20cdf02f8d462582) **/
+	/** Start Envato Elements CSS:Blocks (141-3-1d55f1e76be9fb1a8d9de88accbe962f) **/
+	.envato-kit-138-bracket .elementor-widget-container>*:before {
+		content: "[";
+		color: #ffab00;
+		display: inline-block;
+		margin-right: 4px;
+		line-height: 1em;
+		position: relative;
+		top: -1px
+	}
+
+	.envato-kit-138-bracket .elementor-widget-container>*:after {
+		content: "]";
+		color: #ffab00;
+		display: inline-block;
+		margin-left: 4px;
+		line-height: 1em;
+		position: relative;
+		top: -1px
+	}
+
+	/** End Envato Elements CSS:Blocks (141-3-1d55f1e76be9fb1a8d9de88accbe962f) **/
+</style>
+<!-- OceanWP CSS -->
+<style type="text/css">
+	/* Header CSS */
+	#site-header.has-header-media .overlay-header-media {
+		background-color: rgba(0, 0, 0, 0.5)
+	}
+
+	#site-navigation-wrap .dropdown-menu>li>a {
+		padding: 0 8px
+	}
+
+	#site-navigation-wrap .dropdown-menu>li>a,
+	.oceanwp-mobile-menu-icon a,
+	#searchform-header-replace-close {
+		color: #757575
+	}
+
+	#site-navigation-wrap .dropdown-menu>.current-menu-item>a,
+	#site-navigation-wrap .dropdown-menu>.current-menu-ancestor>a,
+	#site-navigation-wrap .dropdown-menu>.current-menu-item>a:hover,
+	#site-navigation-wrap .dropdown-menu>.current-menu-ancestor>a:hover {
+		color: #020202
+	}
+
+	#site-navigation-wrap .dropdown-menu>li>a:hover,
+	#site-navigation-wrap .dropdown-menu>li.sfHover>a {
+		background-color: rgba(221, 51, 51, 0.37)
+	}
+
+	/* Typography CSS */
+	h1 {
+		font-size: 28px
+	}
+
+	#site-logo a.site-logo-text {
+		font-family: Permanent Marker;
+		font-size: 43px;
+		line-height: 1.4
+	}
+
+	#site-navigation-wrap .dropdown-menu>li>a,
+	#site-header.full_screen-header .fs-dropdown-menu>li>a,
+	#site-header.top-header #site-navigation-wrap .dropdown-menu>li>a,
+	#site-header.center-header #site-navigation-wrap .dropdown-menu>li>a,
+	#site-header.medium-header #site-navigation-wrap .dropdown-menu>li>a,
+	.oceanwp-mobile-menu-icon a {
+		font-size: 14px;
+		letter-spacing: 2.7px;
+		text-transform: uppercase
+	}
+</style>
+<style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style>
+</head>
+
+
+<main id="main" class="site-main clr">
+
+
+
+	<div id="content-wrap" class="container clr">
+
+
+		<div id="primary" class="content-area clr">
+
+
+			<div id="content" class="site-content clr">
+
+
+
+				<article class="single-page-article clr">
+
+
+					<div class="entry clr" itemprop="text">
+						<div class="elementor elementor-396">
+							<div class="elementor-inner">
+								<div class="elementor-section-wrap">
+									<section data-id="42ee16a9" class="elementor-element elementor-element-42ee16a9 elementor-section-content-middle elementor-section-full_width elementor-section-height-min-height elementor-section-items-stretch elementor-section-height-default elementor-section elementor-top-section"
+									 data-element_type="section">
+										<div class="elementor-container elementor-column-gap-no">
+											<div class="elementor-row">
+												<div data-id="37e2f3b1" class="elementor-element elementor-element-37e2f3b1 elementor-column elementor-col-33 elementor-top-column"
+												 data-element_type="column">
+													<div class="elementor-column-wrap elementor-element-populated">
+														<div class="elementor-widget-wrap">
+															<div data-id="62396c8e" class="elementor-element elementor-element-62396c8e elementor-widget elementor-widget-spacer"
+															 data-element_type="spacer.default">
+																<div class="elementor-widget-container">
+																	<div class="elementor-spacer">
+																		<div class="elementor-spacer-inner"></div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div data-id="1f545734" class="elementor-element elementor-element-1f545734 elementor-column elementor-col-33 elementor-top-column"
+												 data-element_type="column">
+													<div class="elementor-column-wrap elementor-element-populated">
+														<div class="elementor-widget-wrap">
+															<div data-id="273c332" class="elementor-element elementor-element-273c332 elementor-widget elementor-widget-heading"
+															 data-element_type="heading.default">
+																<div class="elementor-widget-container">
+																	<h5 class="elementor-heading-title elementor-size-default">Our Services</h5>
+																</div>
+															</div>
+															<div data-id="72aac867" class="elementor-element elementor-element-72aac867 elementor-widget elementor-widget-heading"
+															 data-element_type="heading.default">
+																<div class="elementor-widget-container">
+																	<h2 class="elementor-heading-title elementor-size-default">Breaking new dimensions.</h2>
+																</div>
+															</div>
+															<div data-id="696169fa" class="elementor-element elementor-element-696169fa elementor-widget elementor-widget-divider"
+															 data-element_type="divider.default">
+																<div class="elementor-widget-container">
+																	<div class="elementor-divider">
+																		<span class="elementor-divider-separator"></span>
+																	</div>
+																</div>
+															</div>
+															<div data-id="50177fa3" class="elementor-element elementor-element-50177fa3 elementor-widget elementor-widget-text-editor"
+															 data-element_type="text-editor.default">
+																<div class="elementor-widget-container">
+																	<div class="elementor-text-editor elementor-clearfix">
+																		<p>Siverra
+																			lectus mauris ultrices eros in. Eget egestas purus viverra accumsan in
+																			nisl nulla nisi scelerisque euvestibulum sed risus
+																			ultricies.&nbsp;Fermentum posuere urna nec tincidunt. Quis imperdiet
+																			massa tincidunt nunc pulvinar sapien et ligula ullamcorper.</p>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div data-id="738e4d05" class="elementor-element elementor-element-738e4d05 elementor-column elementor-col-33 elementor-top-column"
+												 data-element_type="column">
+													<div class="elementor-column-wrap elementor-element-populated">
+														<div class="elementor-widget-wrap">
+															<div data-id="5f15b201" class="elementor-element elementor-element-5f15b201 elementor-widget elementor-widget-spacer"
+															 data-element_type="spacer.default">
+																<div class="elementor-widget-container">
+																	<div class="elementor-spacer">
+																		<div class="elementor-spacer-inner"></div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</section>
+									<section data-id="46ada0e4" class="elementor-element elementor-element-46ada0e4 elementor-section-content-middle elementor-section-full_width elementor-section-height-min-height elementor-section-items-stretch elementor-reverse-mobile elementor-section-height-default elementor-section elementor-top-section"
+									 data-element_type="section">
+										<div class="elementor-container elementor-column-gap-no">
+											<div class="elementor-row">
+												<div data-id="54007e31" class="elementor-element elementor-element-54007e31 elementor-column elementor-col-33 elementor-top-column"
+												 data-element_type="column">
+													<div class="elementor-column-wrap elementor-element-populated">
+														<div class="elementor-widget-wrap">
+															<div data-id="3ab14d78" class="elementor-element elementor-element-3ab14d78 elementor-widget elementor-widget-spacer"
+															 data-element_type="spacer.default">
+																<div class="elementor-widget-container">
+																	<div class="elementor-spacer">
+																		<div class="elementor-spacer-inner"></div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div data-id="390444cf" class="elementor-element elementor-element-390444cf elementor-column elementor-col-33 elementor-top-column"
+												 data-element_type="column">
+													<div class="elementor-column-wrap elementor-element-populated">
+														<div class="elementor-widget-wrap">
+															<div data-id="48c36139" class="elementor-element elementor-element-48c36139 elementor-widget elementor-widget-heading"
+															 data-element_type="heading.default">
+																<div class="elementor-widget-container">
+																	<h5 class="elementor-heading-title elementor-size-default">Our Services</h5>
+																</div>
+															</div>
+															<div data-id="2dda239" class="elementor-element elementor-element-2dda239 elementor-widget elementor-widget-heading"
+															 data-element_type="heading.default">
+																<div class="elementor-widget-container">
+																	<h2 class="elementor-heading-title elementor-size-default">Connecting those dots.</h2>
+																</div>
+															</div>
+															<div data-id="2ace1b82" class="elementor-element elementor-element-2ace1b82 elementor-widget elementor-widget-divider"
+															 data-element_type="divider.default">
+																<div class="elementor-widget-container">
+																	<div class="elementor-divider">
+																		<span class="elementor-divider-separator"></span>
+																	</div>
+																</div>
+															</div>
+															<div data-id="5d3ba945" class="elementor-element elementor-element-5d3ba945 elementor-widget elementor-widget-text-editor"
+															 data-element_type="text-editor.default">
+																<div class="elementor-widget-container">
+																	<div class="elementor-text-editor elementor-clearfix">
+																		<p>Siverra
+																			lectus mauris ultrices eros in. Eget egestas purus viverra accumsan in
+																			nisl nulla nisi scelerisque euvestibulum sed risus
+																			ultricies.&nbsp;Fermentum posuere urna nec tincidunt. Quis imperdiet
+																			massa tincidunt nunc pulvinar sapien et ligula ullamcorper.</p>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div data-id="39b60b81" class="elementor-element elementor-element-39b60b81 elementor-column elementor-col-33 elementor-top-column"
+												 data-element_type="column">
+													<div class="elementor-column-wrap elementor-element-populated">
+														<div class="elementor-widget-wrap">
+															<div data-id="364f5b89" class="elementor-element elementor-element-364f5b89 elementor-widget elementor-widget-spacer"
+															 data-element_type="spacer.default">
+																<div class="elementor-widget-container">
+																	<div class="elementor-spacer">
+																		<div class="elementor-spacer-inner"></div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</section>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+
+			</div><!-- #content -->
+
+
+		</div><!-- #primary -->
+
+
+
+	</div><!-- #content-wrap -->
+
+
+
+</main><!-- #main -->
+
+
+{% endblock %}

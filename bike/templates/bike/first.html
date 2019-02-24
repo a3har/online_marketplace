@@ -1,0 +1,105 @@
+{% extends 'home/base.html' %}
+
+{% block title %}Bikes{% endblock %}
+
+{% block body %}
+{% if bike_all %}
+<section class="elementor-element elementor-element-bd7aef8 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"
+    data-element_type="section">
+    <div class="elementor-container elementor-column-gap-default">
+        <div class="elementor-row">
+
+
+
+            {% for bike in bike_all %}
+            <div data-id="d968728" class="elementor-element elementor-element-d968728 elementor-column elementor-col-33 elementor-top-column"
+                data-element_type="column">
+                <div class="elementor-column-wrap elementor-element-populated">
+                    <div class="elementor-widget-wrap">
+                        <div data-id="778203a" class="elementor-element elementor-element-778203a elementor-widget elementor-widget-image"
+                            data-element_type="image.default">
+                            <div class="elementor-widget-container">
+                                <div class="elementor-image"><a href="{% url 'bike:details' bike.id %}">
+                                        <img src="{{ bike.Model_img.url }}" class="attachment-large size-large" alt=""
+                                            sizes="(max-width: 525px) 100vw, 525px" width="525" height="350"></a></div>
+                            </div>
+                        </div>
+                        <div data-id="44797d9" class="elementor-element elementor-element-44797d9 elementor-widget elementor-widget-text-editor"
+                            data-element_type="text-editor.default">
+                            <div class="elementor-widget-container tcen">
+                                <div class="elementor-text-editor elementor-clearfix" style="text-align:center; font-size: 3rem;font-family: 'Bangers', cursive;">{{ bike.Company_name }} {{ bike.Model_name }}</div>
+                            </div>
+                        </div>
+                        <div class="elementor-element elementor-element-88d023c elementor-widget elementor-widget-text-editor"
+                            data-element_type="text-editor.default">
+                            <div class="elementor-widget-container">
+                                <div class="elementor-text-editor elementor-clearfix">
+                                    <p>Lorem,
+                                        ipsum dolor sit amet consectetur
+                                        adipisicing elit. Distinctio facere dicta
+                                        rerum exercitationem nulla a enim repellat,
+                                        ratione doloribus at soluta. Inventore
+                                        eligendi deserunt officia non ab doloremque
+                                        obcaecati. Quibusdam praesentium inventore
+                                        tempora eius, corporis, delectus magni
+                                        pariatur exercitationem ad in aperiam
+                                        similique eum! Quos magni illum perferendis
+                                        corrupti nesciunt!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-id="88d023c" class="elementor-element elementor-element-88d023c elementor-widget elementor-widget-text-editor"
+                            data-element_type="text-editor.default">
+                            <div class="elementor-widget-container">
+                                <div class="elementor-text-editor elementor-clearfix">
+                                    <p style="text-align: center;font-family: 'Flamenco', cursive;font-size: 3rem;color: #3a50b2"><i
+                                            class="fas fa-rupee-sign" style="font-size: 2rem;margin-top:0rem;margin-bottom: 0rem;"></i><strike>
+                                            {{bike.Price_before }}</strike></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-id="ef03ae0" class="elementor-element elementor-element-ef03ae0 elementor-widget elementor-widget-heading"
+                            data-element_type="heading.default">
+                            <div class="elementor-widget-container">
+                                <h2 class="elementor-heading-title elementor-size-default" style="font-family: 'Flamenco', cursive;font-size: 5rem;margin-top:0rem;margin-bottom: 0rem;"><i
+                                        class="fas fa-rupee-sign" style="font-size: 3rem;margin-top:0rem;margin-bottom: 0rem;"></i>
+                                    {{ bike.Price_after }}</h2>
+                            </div>
+                        </div>
+                        <div data-id="6461ef6" class="elementor-element elementor-element-6461ef6 elementor-align-center elementor-widget elementor-widget-button"
+                            data-element_type="button.default">
+                            <div class="elementor-widget-container">
+                                <div class="elementor-button-wrapper">
+                                    <a href="{% url 'bike:details' bike.id %}" class="elementor-button-link elementor-button elementor-size-sm" role="button">
+                                        <span class="elementor-button-content-wrapper">
+                                            <span class="elementor-button-text">Buy
+                                                Now</span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% if forloop.last %}
+        </div>
+    </div>
+</section>
+{% else %}
+{% if forloop.counter|divisibleby:"3" %}
+</div>
+</div>
+</section>
+<section class="elementor-element elementor-element-bd7aef8 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"
+    data-element_type="section">
+    <div class="elementor-container elementor-column-gap-default">
+        <div class="elementor-row">
+
+            {% endif %}
+            {% endif %}
+            {% endfor %}
+            {% else %}
+            <h3>ADD BIKES</h3>
+            {% endif %}
+            {% endblock %}

@@ -1,0 +1,330 @@
+{% extends 'home/base.html' %}
+
+{% block body %}
+{% load staticfiles %}
+
+<link rel="stylesheet" id="elementor-common-css" href="{% static 'home/details_files/common.css' %}" type="text/css" media="all">
+<link rel="stylesheet" id="font-awesome-css" href="{% static 'home/details_files/font-awesome.css' %}" type="text/css" media="all">
+<link rel="stylesheet" id="simple-line-icons-css" href="{% static 'home/details_files/simple-line-icons.css' %}" type="text/css" media="all">
+<link rel="stylesheet" id="magnific-popup-css" href="{% static 'home/details_files/magnific-popup.css' %}" type="text/css" media="all">
+<link rel="stylesheet" id="slick-css" href="{% static 'home/details_files/slick.css' %}" type="text/css" media="all">
+<link rel="stylesheet" id="oceanwp-style-css" href="{% static 'home/details_files/style.css' %}" type="text/css" media="all">
+<link rel="stylesheet" id="oceanwp-google-font-permanent-marker-css" href="{% static 'home/details_files/css_002.css' %}" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-animations-css" href="{% static 'home/details_files/animations.css' %}" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-frontend-css" href="{% static 'home/details_files/frontend.css' %}" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-global-css" href="{% static 'home/details_files/global.css' %}" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-post-396-css" href="{% static 'home/details_files/post-396.css' %}" type="text/css" media="all">
+<link rel="stylesheet" id="oe-widgets-style-css" href="{% static 'home/details_files/widgets.css' %}" type="text/css" media="all">
+<link rel="stylesheet" id="google-fonts-1-css" href="{% static 'home/details_files/css.css' %}" type="text/css" media="all">
+<script type="text/javascript" src="{% static 'home/details_files/jquery.js' %}"></script>
+<script type="text/javascript" src="{% static 'home/details_files/jquery-migrate.js' %}"></script>
+<script type="text/javascript" src="{% static 'home/details_files/mailchimp.js' %}"></script>
+<script type="text/javascript" src="{% static 'home/details_files/share.js' %}"></script>
+<main id="main" class="site-main clr">
+
+
+
+	<div id="content-wrap" class="container clr">
+
+
+		<div id="primary" class="content-area clr">
+
+
+			<div id="content" class="site-content clr">
+
+
+
+				<article class="single-page-article clr">
+
+
+					<div class="entry clr" itemprop="text">
+						<div class="elementor elementor-396">
+							<div class="elementor-inner">
+								<div class="elementor-section-wrap">
+									<section data-id="7b17f109" class="elementor-element elementor-element-7b17f109 envato-kit-141-top-0 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"
+									 data-settings="{&quot;background_background&quot;:&quot;classic&quot;}" data-element_type="section">
+										<div class="elementor-background-overlay"></div>
+										<div class="elementor-container elementor-column-gap-wider">
+											<div class="elementor-row">
+												<div data-id="7c377897" class="elementor-element elementor-element-7c377897 elementor-column elementor-col-50 elementor-top-column"
+												 data-element_type="column">
+													<div class="elementor-column-wrap elementor-element-populated">
+														<div class="elementor-widget-wrap">
+															<div data-id="2964cc7a" class="elementor-element elementor-element-2964cc7a animated elementor-widget elementor-widget-image fadeIn"
+															 data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_animation_delay&quot;:100}"
+															 data-element_type="image.default">
+																<div class="elementor-widget-container">
+																	<div class="elementor-image">
+																		<img src="{{ userinfo.Profile_image.url }}" title="a1" alt="a1">
+																	</div>
+																</div>
+															</div>
+															<section data-id="53237144" class="elementor-element elementor-element-53237144 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section"
+															 data-element_type="section">
+																<div class="elementor-container elementor-column-gap-no">
+																	<div class="elementor-row">
+																		<div data-id="32796cd2" class="elementor-element elementor-element-32796cd2 animated elementor-column elementor-col-50 elementor-inner-column fadeIn"
+																		 data-settings="{&quot;animation&quot;:&quot;fadeIn&quot;,&quot;animation_delay&quot;:150}"
+																		 data-element_type="column">
+																			<div class="elementor-column-wrap elementor-element-populated">
+																				<div class="elementor-widget-wrap">
+																					<div data-id="7412aa70" class="elementor-element elementor-element-7412aa70 elementor-widget elementor-widget-heading"
+																					 data-element_type="heading.default">
+																						<div class="elementor-widget-container">
+																							<h2 class="elementor-heading-title elementor-size-default">Contact Information</h2>
+																						</div>
+																					</div>
+																					<div data-id="72443c7" class="elementor-element elementor-element-72443c7 elementor-widget elementor-widget-icon-list"
+																					 data-element_type="icon-list.default">
+																						<div class="elementor-widget-container">
+																							<ul class="elementor-icon-list-items">
+																								<li class="elementor-icon-list-item">
+																									<span class="elementor-icon-list-icon">
+																										<i class="fa fa-whatsapp" aria-hidden="true"></i>
+																									</span>
+																									<span class="elementor-icon-list-text">{{ userinfo.phone_number }}</span>
+																								</li>
+																								<li class="elementor-icon-list-item">
+																									<span class="elementor-icon-list-icon">
+																										<i class="fa fa-phone" aria-hidden="true"></i>
+																									</span>
+																									<span class="elementor-icon-list-text">{{ userinfo.phone_number }}</span>
+																								</li>
+																								<li class="elementor-icon-list-item">
+																									<span class="elementor-icon-list-icon">
+																										<i class="fa fa-envelope-open-o" aria-hidden="true"></i>
+																									</span>
+																									<span class="elementor-icon-list-text">{{ userinfo.user.email }}</span>
+																								</li>
+																							</ul>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																		<div data-id="3bef44b6" class="elementor-element elementor-element-3bef44b6 animated elementor-column elementor-col-50 elementor-inner-column fadeIn"
+																		 data-settings="{&quot;animation&quot;:&quot;fadeIn&quot;,&quot;animation_delay&quot;:200}"
+																		 data-element_type="column">
+																			<div class="elementor-column-wrap elementor-element-populated">
+																				<div class="elementor-widget-wrap">
+																					<div data-id="136170a4" class="elementor-element elementor-element-136170a4 elementor-widget elementor-widget-heading"
+																					 data-element_type="heading.default">
+																						<div class="elementor-widget-container">
+																							<h2 class="elementor-heading-title elementor-size-default">Social Media</h2>
+																						</div>
+																					</div>
+																					<div data-id="54d685fc" class="elementor-element elementor-element-54d685fc elementor-widget elementor-widget-icon-list"
+																					 data-element_type="icon-list.default">
+																						<div class="elementor-widget-container">
+																							<ul class="elementor-icon-list-items">
+																								<li class="elementor-icon-list-item">
+																									<span class="elementor-icon-list-icon">
+																										<i class="fa fa-facebook" aria-hidden="true"></i>
+																									</span>
+																									<span class="elementor-icon-list-text">{{ userinfo.name }}</span>
+																								</li>
+																								<li class="elementor-icon-list-item">
+																									<span class="elementor-icon-list-icon">
+																										<i class="fa fa-twitter" aria-hidden="true"></i>
+																									</span>
+																									<span class="elementor-icon-list-text">@{{ userinfo.name }}</span>
+																								</li>
+																								<li class="elementor-icon-list-item">
+																									<span class="elementor-icon-list-icon">
+																										<i class="fa fa-instagram" aria-hidden="true"></i>
+																									</span>
+																									<span class="elementor-icon-list-text">{{ userinfo.name }}</span>
+																								</li>
+																							</ul>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</section>
+														</div>
+													</div>
+												</div>
+												<div data-id="7ceae847" class="elementor-element elementor-element-7ceae847 elementor-column elementor-col-50 elementor-top-column"
+												 data-element_type="column">
+													<div class="elementor-column-wrap elementor-element-populated">
+														<div class="elementor-widget-wrap">
+															<div data-id="1f740e89" class="elementor-element elementor-element-1f740e89 animated elementor-widget elementor-widget-heading fadeIn"
+															 data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_animation_delay&quot;:100}"
+															 data-element_type="heading.default">
+																<div class="elementor-widget-container">
+																	<h2 class="elementor-heading-title elementor-size-default">{{ userinfo.name }}</h2>
+																</div>
+															</div>
+															<div data-id="16961" class="elementor-element elementor-element-16961 animated elementor-widget elementor-widget-heading fadeIn"
+															 data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_animation_delay&quot;:150}"
+															 data-element_type="heading.default">
+																<div class="elementor-widget-container">
+																	<h2 class="elementor-heading-title elementor-size-default">@{{ userinfo.name }}</h2>
+																</div>
+															</div>
+															<div data-id="6d285c4e" class="elementor-element elementor-element-6d285c4e animated elementor-widget elementor-widget-divider fadeIn"
+															 data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_animation_delay&quot;:200}"
+															 data-element_type="divider.default">
+																<div class="elementor-widget-container">
+																	<div class="elementor-divider">
+																		<span class="elementor-divider-separator"></span>
+																	</div>
+																</div>
+															</div>
+															<div data-id="714cae89" class="elementor-element elementor-element-714cae89 animated elementor-widget elementor-widget-text-editor fadeIn"
+															 data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_animation_delay&quot;:250}"
+															 data-element_type="text-editor.default">
+																<div class="elementor-widget-container">
+																	<div class="elementor-text-editor elementor-clearfix"></div>
+																</div>
+															</div>
+															<section data-id="3dc14b5f" class="elementor-element elementor-element-3dc14b5f elementor-section-content-middle animated envato-kit-141-bottom-0 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section fadeInDown"
+															 data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInDown&quot;,&quot;animation_delay&quot;:50}"
+															 data-element_type="section">
+																<div class="elementor-container elementor-column-gap-no">
+																	<div class="elementor-row">
+																		<div data-id="638123be" class="elementor-element elementor-element-638123be elementor-column elementor-col-50 elementor-inner-column"
+																		 data-element_type="column">
+																			<div class="elementor-column-wrap elementor-element-populated">
+																				<div class="elementor-widget-wrap">
+																					<div data-id="e9643e3" class="elementor-element elementor-element-e9643e3 elementor-widget elementor-widget-heading"
+																					 data-element_type="heading.default">
+																						<div class="elementor-widget-container">
+																							<h2 class="elementor-heading-title elementor-size-default">City</h2>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																		<div data-id="d13ef2c" class="elementor-element elementor-element-d13ef2c elementor-column elementor-col-50 elementor-inner-column"
+																		 data-element_type="column">
+																			<div class="elementor-column-wrap elementor-element-populated">
+																				<div class="elementor-widget-wrap">
+																					<div data-id="4b0c22a9" class="elementor-element elementor-element-4b0c22a9 elementor-widget elementor-widget-text-editor"
+																					 data-element_type="text-editor.default">
+																						<div class="elementor-widget-container">
+																							<div class="elementor-text-editor elementor-clearfix">
+																								<p>{{ userinfo.city }}</p>
+																							</div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</section>
+															<section data-id="703c4a7" class="elementor-element elementor-element-703c4a7 elementor-section-content-middle animated envato-kit-141-bottom-0 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section fadeInDown"
+															 data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInDown&quot;,&quot;animation_delay&quot;:100}"
+															 data-element_type="section">
+																<div class="elementor-container elementor-column-gap-no">
+																	<div class="elementor-row">
+																		<div data-id="109f230e" class="elementor-element elementor-element-109f230e elementor-column elementor-col-50 elementor-inner-column"
+																		 data-element_type="column">
+																			<div class="elementor-column-wrap elementor-element-populated">
+																				<div class="elementor-widget-wrap">
+																					<div data-id="4e158327" class="elementor-element elementor-element-4e158327 elementor-widget elementor-widget-heading"
+																					 data-element_type="heading.default">
+																						<div class="elementor-widget-container">
+																							<h2 class="elementor-heading-title elementor-size-default">State</h2>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																		<div data-id="c106bd9" class="elementor-element elementor-element-c106bd9 elementor-column elementor-col-50 elementor-inner-column"
+																		 data-element_type="column">
+																			<div class="elementor-column-wrap elementor-element-populated">
+																				<div class="elementor-widget-wrap">
+																					<div data-id="1066e0dc" class="elementor-element elementor-element-1066e0dc elementor-widget elementor-widget-text-editor"
+																					 data-element_type="text-editor.default">
+																						<div class="elementor-widget-container">
+																							<div class="elementor-text-editor elementor-clearfix">
+																								<p>{{ userinfo.state }}</p>
+																							</div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</section>
+															<section data-id="756ee71b" class="elementor-element elementor-element-756ee71b elementor-section-content-middle animated envato-kit-141-bottom-0 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section fadeInDown"
+															 data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInDown&quot;,&quot;animation_delay&quot;:150}"
+															 data-element_type="section">
+																<div class="elementor-container elementor-column-gap-no">
+																	<div class="elementor-row">
+																		<div data-id="276e8b4e" class="elementor-element elementor-element-276e8b4e elementor-column elementor-col-50 elementor-inner-column"
+																		 data-element_type="column">
+																			<div class="elementor-column-wrap elementor-element-populated">
+																				<div class="elementor-widget-wrap">
+																					<div data-id="2b539e8" class="elementor-element elementor-element-2b539e8 elementor-widget elementor-widget-heading"
+																					 data-element_type="heading.default">
+																						<div class="elementor-widget-container">
+																							<h2 class="elementor-heading-title elementor-size-default">Address</h2>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																		<div data-id="5f6aaa75" class="elementor-element elementor-element-5f6aaa75 elementor-column elementor-col-50 elementor-inner-column"
+																		 data-element_type="column">
+																			<div class="elementor-column-wrap elementor-element-populated">
+																				<div class="elementor-widget-wrap">
+																					<div data-id="4697865" class="elementor-element elementor-element-4697865 elementor-widget elementor-widget-text-editor"
+																					 data-element_type="text-editor.default">
+																						<div class="elementor-widget-container">
+																							<div class="elementor-text-editor elementor-clearfix">
+																								<p>{{ userinfo.address }}</p>
+																							</div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</section>
+															{% if bike is not None %}
+															<div data-id="11e3ca6" class="elementor-element elementor-element-11e3ca6 elementor-align-right elementor-widget elementor-widget-button"
+															 data-element_type="button.default">
+																<div class="elementor-widget-container">
+																	<div class="elementor-button-wrapper">
+																		<a href="{% url 'bike:bike-upload' %}" class="elementor-button-link elementor-button elementor-size-sm" role="button">
+																			<span class="elementor-button-content-wrapper">
+																				<span class="elementor-button-text">View status of registered vehicle(s) </span>
+																			</span>
+																		</a>
+																	</div>
+																</div>
+															</div>
+															{% endif %}
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</section>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+
+			</div><!-- #content -->
+
+
+		</div><!-- #primary -->
+
+
+
+	</div><!-- #content-wrap -->
+
+
+
+</main><!-- #main -->
+{% endblock %}

@@ -1,0 +1,106 @@
+{% extends 'home/base.html' %}
+
+{% block body %}
+{% load staticfiles %}
+
+
+<link rel="https://api.w.org/" href="http://localhost/wordpress/index.php?rest_route=/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://localhost/wordpress/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://localhost/wordpress/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 4.9.8">
+<link rel="canonical" href="http://localhost/wordpress/">
+<link rel="shortlink" href="http://localhost/wordpress/">
+<link rel="alternate" type="application/json+oembed" href="http://localhost/wordpress/index.php?rest_route=%2Foembed%2F1.0%2Fembed&amp;url=http%3A%2F%2Flocalhost%2Fwordpress%2F">
+<main id="main" class="site-main clr">
+
+
+
+    <div id="content-wrap" class="container clr">
+
+
+        <div id="primary" class="content-area clr">
+
+
+            <div id="content" class="site-content clr">
+
+
+
+                <article class="single-page-article clr">
+
+
+                    <div class="entry clr" itemprop="text">
+                        <div class="elementor elementor-396">
+                            <div class="elementor-inner">
+                                <div class="elementor-section-wrap">
+                                    <section data-id="f88d098" class="elementor-element elementor-element-f88d098 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"
+                                        data-element_type="section">
+                                        <div class="elementor-container elementor-column-gap-default">
+                                            <div class="elementor-row">
+                                                <div data-id="f30f88d" class="elementor-element elementor-element-f30f88d elementor-column elementor-col-100 elementor-top-column"
+                                                    data-element_type="column">
+                                                    <div class="elementor-column-wrap elementor-element-populated">
+                                                        <div class="elementor-widget-wrap">
+                                                            <div data-id="8c2cf3e" class="elementor-element elementor-element-8c2cf3e elementor-widget elementor-widget-text-editor"
+                                                                data-element_type="text-editor.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <div class="card" style="width: 100%;">
+                                                                        <div class="card-body">
+                                                                            <h3 class="text-center">Login</h3>
+                                                                            <form method="post" action="" enctype="multipart/form-data">
+                                                                                {% csrf_token %}
+                                                                                <div class="mt-4 ml-3">{{ form.username.label_tag }}</div>
+                                                                                <div class="input-group col-7">
+                                                                                    {{ form.username }}
+                                                                                </div>
+                                                                                <div class="col-7 col-sm-offset-2 col-sm-10">
+                                                                                    <span class="text-danger small">{{form.username.errors }}</span>
+                                                                                </div>
+                                                                                <div class="mt-3 ml-3">{{ form.password.label_tag }}</div>
+                                                                                <div class="input-group col-7">
+                                                                                    {{ form.password }}
+                                                                                </div>
+                                                                                <div class="col-7 col-sm-offset-2 col-sm-10">
+                                                                                    <span class="text-danger small">{{form.password.errors }}</span>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <div class="col-12 text-center mt-5">
+                                                                                        <a href="{% url 'home:login' %}">
+                                                                                            <button type="submit" class="btn btn-success btn-lg">Login<i
+                                                                                                    class="fas fa-sign-in-alt ml-1"></i></button>
+                                                                                        </a>
+                                                                                        <a href="{% url 'home:register' %}"
+                                                                                            type="button" class="btn btn-primary">Sign
+                                                                                            Up <i class="fas fa-user-plus ml-1"></i></a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </form>
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </div><!-- #content -->
+
+
+        </div><!-- #primary -->
+
+
+
+    </div><!-- #content-wrap -->
+
+
+
+</main><!-- #main -->
+{% endblock %}
